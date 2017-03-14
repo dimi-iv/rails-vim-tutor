@@ -1,3 +1,5 @@
 #!/bin/bash
-vim INSTRUCTIONS
+bundle install
+cp -f INSTRUCTIONS sample_rails5_app/tmp/INSTRUCTIONS
+vim sample_rails5_app/tmp/INSTRUCTIONS
 

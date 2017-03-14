@@ -1,0 +1,1555 @@
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170303005057)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", 2017-03-03 02:33:29 UTC], ["updated_at", 2017-03-03 02:33:29 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170305062103)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170303005057);
+
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", 2017-03-06 20:02:31 UTC], ["updated_at", 2017-03-06 20:02:31 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 20:02:31.249045', '2017-03-06 20:02:31.249045', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 20:02:31.249045', '2017-03-06 20:02:31.249045', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 20:02:31.253312', '2017-03-06 20:02:31.253312', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 20:02:31.253312', '2017-03-06 20:02:31.253312', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CommentsControllerTest: test_should_get_index
+---------------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 15:02:31 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 963ms (Views: 929.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:14:05.627379', '2017-03-06 21:14:05.627379', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:14:05.627379', '2017-03-06 21:14:05.627379', 298486374)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:14:05.631092', '2017-03-06 21:14:05.631092', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:14:05.631092', '2017-03-06 21:14:05.631092', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:14:06 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 261ms (Views: 227.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:17:19.255605', '2017-03-06 21:17:19.255605', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:17:19.255605', '2017-03-06 21:17:19.255605', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:17:19.258194', '2017-03-06 21:17:19.258194', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:17:19.258194', '2017-03-06 21:17:19.258194', 298486374)[0m
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:17:19 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 270ms (Views: 236.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:17:34.435080', '2017-03-06 21:17:34.435080', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:17:34.435080', '2017-03-06 21:17:34.435080', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:17:34.440713', '2017-03-06 21:17:34.440713', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:17:34.440713', '2017-03-06 21:17:34.440713', 298486374)[0m
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:17:34 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 265ms (Views: 235.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:17:46.246892', '2017-03-06 21:17:46.246892', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:17:46.246892', '2017-03-06 21:17:46.246892', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:17:46.250859', '2017-03-06 21:17:46.250859', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:17:46.250859', '2017-03-06 21:17:46.250859', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:17:46 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 279ms (Views: 248.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 16:17:47 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:17:54.808848', '2017-03-06 21:17:54.808848', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:17:54.808848', '2017-03-06 21:17:54.808848', 298486374)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:17:54.811286', '2017-03-06 21:17:54.811286', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:17:54.811286', '2017-03-06 21:17:54.811286', 298486374)[0m
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 16:17:55 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 264ms (Views: 249.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:17:55 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:19:52.036692', '2017-03-06 21:19:52.036692', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:19:52.036692', '2017-03-06 21:19:52.036692', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:19:52.042849', '2017-03-06 21:19:52.042849', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:19:52.042849', '2017-03-06 21:19:52.042849', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:19:52 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 244ms (Views: 214.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 16:19:52 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:19:57.832225', '2017-03-06 21:19:57.832225', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:19:57.832225', '2017-03-06 21:19:57.832225', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:19:57.835737', '2017-03-06 21:19:57.835737', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:19:57.835737', '2017-03-06 21:19:57.835737', 298486374)[0m
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:19:58 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 246ms (Views: 211.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 16:19:58 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:23:30.640442', '2017-03-06 21:23:30.640442', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:23:30.640442', '2017-03-06 21:23:30.640442', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:23:30.642949', '2017-03-06 21:23:30.642949', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:23:30.642949', '2017-03-06 21:23:30.642949', 298486374)[0m
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:23:31 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 251ms (Views: 217.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 16:23:31 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:23:40.505838', '2017-03-06 21:23:40.505838', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:23:40.505838', '2017-03-06 21:23:40.505838', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:23:40.510154', '2017-03-06 21:23:40.510154', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:23:40.510154', '2017-03-06 21:23:40.510154', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:23:41 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 244ms (Views: 208.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 16:23:41 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:23:46.929834', '2017-03-06 21:23:46.929834', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:23:46.929834', '2017-03-06 21:23:46.929834', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:23:46.932084', '2017-03-06 21:23:46.932084', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:23:46.932084', '2017-03-06 21:23:46.932084', 298486374)[0m
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 16:23:47 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 222ms (Views: 206.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:23:47 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 70ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:26:29.835079', '2017-03-06 21:26:29.835079', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:26:29.835079', '2017-03-06 21:26:29.835079', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:26:29.840965', '2017-03-06 21:26:29.840965', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:26:29.840965', '2017-03-06 21:26:29.840965', 298486374)[0m
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:26:30 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 278ms (Views: 244.7ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 16:26:30 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.7ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:29:20.406734', '2017-03-06 21:29:20.406734', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:29:20.406734', '2017-03-06 21:29:20.406734', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:29:20.412786', '2017-03-06 21:29:20.412786', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:29:20.412786', '2017-03-06 21:29:20.412786', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:29:20 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 234ms (Views: 207.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 16:29:21 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:29:29.300708', '2017-03-06 21:29:29.300708', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:29:29.300708', '2017-03-06 21:29:29.300708', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:29:29.303528', '2017-03-06 21:29:29.303528', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:29:29.303528', '2017-03-06 21:29:29.303528', 298486374)[0m
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 16:29:29 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 218ms (Views: 204.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:29:29 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 28ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:29:38.322696', '2017-03-06 21:29:38.322696', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:29:38.322696', '2017-03-06 21:29:38.322696', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:29:38.324932', '2017-03-06 21:29:38.324932', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:29:38.324932', '2017-03-06 21:29:38.324932', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:29:38 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 235ms (Views: 206.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 16:29:39 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.9ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:29:46.396897', '2017-03-06 21:29:46.396897', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:29:46.396897', '2017-03-06 21:29:46.396897', 298486374)[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:29:46.401536', '2017-03-06 21:29:46.401536', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:29:46.401536', '2017-03-06 21:29:46.401536', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:29:46 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 229ms (Views: 201.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 16:29:47 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:32:05.385269', '2017-03-06 21:32:05.385269', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:32:05.385269', '2017-03-06 21:32:05.385269', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:32:05.390883', '2017-03-06 21:32:05.390883', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:32:05.390883', '2017-03-06 21:32:05.390883', 298486374)[0m
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 16:32:05 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 238ms (Views: 201.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 16:32:06 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:35:09.731014', '2017-03-06 21:35:09.731014', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:35:09.731014', '2017-03-06 21:35:09.731014', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:35:09.736118', '2017-03-06 21:35:09.736118', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:35:09.736118', '2017-03-06 21:35:09.736118', 298486374)[0m
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+CommentTest: test_the_truth
+---------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+CommentTest: test_the_truth2
+----------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:38:53.838242', '2017-03-06 21:38:53.838242', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:38:53.838242', '2017-03-06 21:38:53.838242', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:38:53.841610', '2017-03-06 21:38:53.841610', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:38:53.841610', '2017-03-06 21:38:53.841610', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+CommentTest: test_the_truth
+---------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+CommentTest: test_the_truth2
+----------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:39:04.192204', '2017-03-06 21:39:04.192204', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 21:39:04.192204', '2017-03-06 21:39:04.192204', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:39:04.194584', '2017-03-06 21:39:04.194584', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 21:39:04.194584', '2017-03-06 21:39:04.194584', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+CommentTest: test_the_truth
+---------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+CommentTest: test_the_truth2
+----------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:04:36.583129', '2017-03-06 22:04:36.583129', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:04:36.583129', '2017-03-06 22:04:36.583129', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:04:36.585759', '2017-03-06 22:04:36.585759', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:04:36.585759', '2017-03-06 22:04:36.585759', 298486374)[0m
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+CommentTest: test_the_truth2
+----------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+CommentTest: test_the_truth
+---------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:04:59.563290', '2017-03-06 22:04:59.563290', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:04:59.563290', '2017-03-06 22:04:59.563290', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:04:59.566477', '2017-03-06 22:04:59.566477', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:04:59.566477', '2017-03-06 22:04:59.566477', 298486374)[0m
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 17:05:00 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 254ms (Views: 222.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 17:05:00 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+CommentTest: test_the_truth
+---------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+CommentTest: test_the_truth2
+----------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:06:13.167669', '2017-03-06 22:06:13.167669', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:06:13.167669', '2017-03-06 22:06:13.167669', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:06:13.172813', '2017-03-06 22:06:13.172813', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:06:13.172813', '2017-03-06 22:06:13.172813', 298486374)[0m
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 17:06:13 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 291ms (Views: 275.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 17:06:13 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:06:22.272089', '2017-03-06 22:06:22.272089', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:06:22.272089', '2017-03-06 22:06:22.272089', 298486374)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:06:22.278833', '2017-03-06 22:06:22.278833', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:06:22.278833', '2017-03-06 22:06:22.278833', 298486374)[0m
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 17:06:22 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 289ms (Views: 260.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 17:06:22 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:06:28.873096', '2017-03-06 22:06:28.873096', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:06:28.873096', '2017-03-06 22:06:28.873096', 298486374)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:06:28.875884', '2017-03-06 22:06:28.875884', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:06:28.875884', '2017-03-06 22:06:28.875884', 298486374)[0m
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 17:06:29 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 278ms (Views: 263.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 17:06:29 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:12:58.807072', '2017-03-06 22:12:58.807072', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:12:58.807072', '2017-03-06 22:12:58.807072', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:12:58.810128', '2017-03-06 22:12:58.810128', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:12:58.810128', '2017-03-06 22:12:58.810128', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 17:12:59 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 280ms (Views: 267.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 17:12:59 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:15:08.855582', '2017-03-06 22:15:08.855582', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:15:08.855582', '2017-03-06 22:15:08.855582', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:15:08.859746', '2017-03-06 22:15:08.859746', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:15:08.859746', '2017-03-06 22:15:08.859746', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+CommentTest: test_the_truth
+---------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+CommentTest: test_the_truth2
+----------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:16:00.506579', '2017-03-06 22:16:00.506579', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:16:00.506579', '2017-03-06 22:16:00.506579', 298486374)[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:16:00.509200', '2017-03-06 22:16:00.509200', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:16:00.509200', '2017-03-06 22:16:00.509200', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 17:16:00 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 326ms (Views: 298.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 17:16:01 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:22:16.926950', '2017-03-06 22:22:16.926950', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:22:16.926950', '2017-03-06 22:22:16.926950', 298486374)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:22:16.929994', '2017-03-06 22:22:16.929994', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:22:16.929994', '2017-03-06 22:22:16.929994', 298486374)[0m
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 17:22:17 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 222ms (Views: 207.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:23:12.014650', '2017-03-06 22:23:12.014650', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:23:12.014650', '2017-03-06 22:23:12.014650', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:23:12.017039', '2017-03-06 22:23:12.017039', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:23:12.017039', '2017-03-06 22:23:12.017039', 298486374)[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 17:23:12 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 346ms (Views: 310.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 17:23:12 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:23:45.270812', '2017-03-06 22:23:45.270812', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:23:45.270812', '2017-03-06 22:23:45.270812', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:23:45.273245', '2017-03-06 22:23:45.273245', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:23:45.273245', '2017-03-06 22:23:45.273245', 298486374)[0m
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 17:23:45 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 314ms (Views: 284.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 17:23:46 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:41:19.319649', '2017-03-06 22:41:19.319649', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:41:19.319649', '2017-03-06 22:41:19.319649', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:41:19.322764', '2017-03-06 22:41:19.322764', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:41:19.322764', '2017-03-06 22:41:19.322764', 298486374)[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 17:41:19 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 262ms (Views: 230.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 17:41:20 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:41:39.684145', '2017-03-06 22:41:39.684145', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-06 22:41:39.684145', '2017-03-06 22:41:39.684145', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:41:39.686243', '2017-03-06 22:41:39.686243', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-06 22:41:39.686243', '2017-03-06 22:41:39.686243', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-06 17:41:40 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 277ms (Views: 262.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-06 17:41:40 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:24:07.014705', '2017-03-07 20:24:07.014705', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:24:07.014705', '2017-03-07 20:24:07.014705', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:24:07.017878', '2017-03-07 20:24:07.017878', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:24:07.017878', '2017-03-07 20:24:07.017878', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:24:07 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 282ms (Views: 252.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:24:07 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.7ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:25:14.201611', '2017-03-07 20:25:14.201611', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:25:14.201611', '2017-03-07 20:25:14.201611', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:25:14.205047', '2017-03-07 20:25:14.205047', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:25:14.205047', '2017-03-07 20:25:14.205047', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:25:14 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 271ms (Views: 244.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:25:14 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:25:34.585577', '2017-03-07 20:25:34.585577', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:25:34.585577', '2017-03-07 20:25:34.585577', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:25:34.588747', '2017-03-07 20:25:34.588747', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:25:34.588747', '2017-03-07 20:25:34.588747', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:25:35 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 272ms (Views: 244.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:25:35 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.9ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:27:14.693564', '2017-03-07 20:27:14.693564', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:27:14.693564', '2017-03-07 20:27:14.693564', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:27:14.697490', '2017-03-07 20:27:14.697490', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:27:14.697490', '2017-03-07 20:27:14.697490', 298486374)[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:27:15 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 217ms (Views: 188.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:27:15 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:28:18.078771', '2017-03-07 20:28:18.078771', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:28:18.078771', '2017-03-07 20:28:18.078771', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:28:18.081143', '2017-03-07 20:28:18.081143', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:28:18.081143', '2017-03-07 20:28:18.081143', 298486374)[0m
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:28:18 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 240ms (Views: 216.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:28:18 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:28:24.981596', '2017-03-07 20:28:24.981596', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:28:24.981596', '2017-03-07 20:28:24.981596', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:28:24.984062', '2017-03-07 20:28:24.984062', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:28:24.984062', '2017-03-07 20:28:24.984062', 298486374)[0m
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:28:25 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 241ms (Views: 217.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:28:25 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:29:08.109390', '2017-03-07 20:29:08.109390', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:29:08.109390', '2017-03-07 20:29:08.109390', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:29:08.111492', '2017-03-07 20:29:08.111492', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:29:08.111492', '2017-03-07 20:29:08.111492', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:29:08 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 270ms (Views: 246.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:29:08 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:29:19.572907', '2017-03-07 20:29:19.572907', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:29:19.572907', '2017-03-07 20:29:19.572907', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:29:19.575252', '2017-03-07 20:29:19.575252', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:29:19.575252', '2017-03-07 20:29:19.575252', 298486374)[0m
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:29:19 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 224ms (Views: 202.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:29:20 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:29:26.651518', '2017-03-07 20:29:26.651518', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:29:26.651518', '2017-03-07 20:29:26.651518', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:29:26.653850', '2017-03-07 20:29:26.653850', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:29:26.653850', '2017-03-07 20:29:26.653850', 298486374)[0m
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:29:27 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 249ms (Views: 224.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:29:27 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.7ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:30:45.370494', '2017-03-07 20:30:45.370494', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:30:45.370494', '2017-03-07 20:30:45.370494', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:30:45.374465', '2017-03-07 20:30:45.374465', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:30:45.374465', '2017-03-07 20:30:45.374465', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:30:45 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 268ms (Views: 254.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:30:46 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:31:41.531321', '2017-03-07 20:31:41.531321', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:31:41.531321', '2017-03-07 20:31:41.531321', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:31:41.533522', '2017-03-07 20:31:41.533522', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:31:41.533522', '2017-03-07 20:31:41.533522', 298486374)[0m
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:31:41 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 271ms (Views: 240.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:31:42 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:31:59.558947', '2017-03-07 20:31:59.558947', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:31:59.558947', '2017-03-07 20:31:59.558947', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:31:59.561548', '2017-03-07 20:31:59.561548', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:31:59.561548', '2017-03-07 20:31:59.561548', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:31:59 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 290ms (Views: 259.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:32:00 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.9ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:34:55.642141', '2017-03-07 20:34:55.642141', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:34:55.642141', '2017-03-07 20:34:55.642141', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:34:55.645785', '2017-03-07 20:34:55.645785', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:34:55.645785', '2017-03-07 20:34:55.645785', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:34:56 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 259ms (Views: 231.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:34:56 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:35:04.338205', '2017-03-07 20:35:04.338205', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 20:35:04.338205', '2017-03-07 20:35:04.338205', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:35:04.340466', '2017-03-07 20:35:04.340466', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 20:35:04.340466', '2017-03-07 20:35:04.340466', 298486374)[0m
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 15:35:04 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 245ms (Views: 232.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 15:35:04 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 23:13:42.795976', '2017-03-07 23:13:42.795976', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 23:13:42.795976', '2017-03-07 23:13:42.795976', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 23:13:42.799920', '2017-03-07 23:13:42.799920', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 23:13:42.799920', '2017-03-07 23:13:42.799920', 298486374)[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 18:13:43 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 191ms (Views: 162.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 18:13:43 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 23:14:01.786621', '2017-03-07 23:14:01.786621', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 23:14:01.786621', '2017-03-07 23:14:01.786621', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 23:14:01.788852', '2017-03-07 23:14:01.788852', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 23:14:01.788852', '2017-03-07 23:14:01.788852', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 18:14:02 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 190ms (Views: 167.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 18:14:02 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 23:14:28.288509', '2017-03-07 23:14:28.288509', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 23:14:28.288509', '2017-03-07 23:14:28.288509', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 23:14:28.290936', '2017-03-07 23:14:28.290936', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 23:14:28.290936', '2017-03-07 23:14:28.290936', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CommentsControllerTest: test_gets_index
+---------------------------------------
+Started GET "/comments/index" for 127.0.0.1 at 2017-03-07 18:14:28 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 202ms (Views: 178.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 23:14:43.482662', '2017-03-07 23:14:43.482662', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 23:14:43.482662', '2017-03-07 23:14:43.482662', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 23:14:43.485064', '2017-03-07 23:14:43.485064', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 23:14:43.485064', '2017-03-07 23:14:43.485064', 298486374)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+CommentsControllerTest: test_gets_new
+-------------------------------------
+Started GET "/comments/new" for 127.0.0.1 at 2017-03-07 18:14:43 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 156ms (Views: 144.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 23:21:56.321042', '2017-03-07 23:21:56.321042', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at", "id") VALUES (NULL, 1, '2017-03-07 23:21:56.321042', '2017-03-07 23:21:56.321042', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 23:21:56.324353', '2017-03-07 23:21:56.324353', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "id") VALUES ('MyString', '2017-03-07 23:21:56.324353', '2017-03-07 23:21:56.324353', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+CommentTest: test_the_truth
+---------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+CommentTest: test_the_truth2
+----------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
