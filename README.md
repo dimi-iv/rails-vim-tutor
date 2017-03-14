@@ -45,3 +45,11 @@ command. Eg:
 git reset --hard HEAD
 ```
 
+## Links
+
+[rails.vim on vim.org](http://www.vim.org/scripts/script.php?script_id=1567)
+
+[rails.vim on github.com](https://github.com/tpope/vim-rails)
+
+[thoughtbot intro to rails.vim](https://robots.thoughtbot.com/intro-rails-vim)
+
