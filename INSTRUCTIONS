@@ -14,9 +14,9 @@
 
     ATTENTION:
     Any changes made during the lessons that follow will modify the original
-    vim-rails-turor. Assuming that you have pulled a copy of the
+    vim-rails-tutor. Assuming that you have pulled a copy of the
     tutor via git clone, you can always use your favorite git command to
-    restore the instructions and/or the exapmle rails application
+    restore the instructions and/or the example rails application
     to their original state.
 
     Like vimtutor, this tutor aims to teach you some of the rails.vim
@@ -60,7 +60,7 @@
   2. Try executing  :Eview  . This should fail with 'No view name given'.
 
   3. Now, move the cursor to any line between 3 and 5 and execute  :Eview  .
-     This will take you to the view template matching the 'new' aciton.
+     This will take you to the view template matching the 'new' action.
 
   4. Go back to the controller by executing  :Econtroller  .
 
@@ -116,7 +116,7 @@
 
                    Lesson 2.1: CLASS DEFINITION UNDER CURSOR
 
-           **  gf  has been modified to take context into accout. **
+           **  gf  has been modified to take context into account. **
 
   1. Execute  :Vcontroller comments  .
 
@@ -318,7 +318,7 @@
 
                      ** Using  :Rake  to execute tasks. **
 
-  1. In this window execute  :Rake routes. As expected you should see the
+  1. In this window execute  :Rake routes. As expected you should see
      the output of the 'rake routes' command.
 
   2. Execute  :Rake -  to run the last executed command.
